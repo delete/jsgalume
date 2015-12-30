@@ -10,13 +10,19 @@ program
   .usage('[options]')
   .option('-a, --artist', 'Add artist name')
   .option('-m, --music', 'Add music name')
+  .option('-d, --discography', 'List the discography')
   .parse(process.argv)
 
 
+var api = new API();
+
 if ( program.artist && program.music ) {
-	
-	let api = new API();
+
 	api.getLyrics(program.args[0], program.args[1]);
+
+} else if ( program.artist && program.discography) {
+
+	api.getDiscography(program.args[0]);
 
 } else {
 	console.log('Something went wrong, see --help for more information.')
