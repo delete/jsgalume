@@ -15,6 +15,10 @@ Para baixar a letra da música Last Kiss do Pearl Jam:
 
 `node index.js -a "Pearl Jam" -m "Last Kiss"`
 
+Para listar a discografia do Pearl Jam:
+
+`node index.js -a "Pearl Jam" -d`
+
 Mais informações:
 
 `node index.js --help`
