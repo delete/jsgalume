@@ -18,12 +18,12 @@ var api = new API();
 
 if ( program.artist && program.music ) {
 
-	api.getLyrics(program.args[0], program.args[1]);
+  api.getLyrics(program.args[0], program.args[1]);
 
 } else if ( program.artist && program.discography) {
 
-	api.getDiscography(program.args[0]);
+  api.getDiscography(program.args[0]);
 
 } else {
-	console.log('Something went wrong, see --help for more information.')
+  console.log('Something went wrong, see --help for more information.')
 }
