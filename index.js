@@ -25,5 +25,5 @@ if ( program.artist && program.music ) {
   api.getDiscography(program.args[0]);
 
 } else {
-  console.log('Something went wrong, see --help for more information.')
+  console.log('Something went wrong, see --help for more information.');
 }
