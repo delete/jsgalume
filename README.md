@@ -22,3 +22,14 @@ Para listar a discografia do Pearl Jam:
 Mais informações:
 
 `node index.js --help`
+
+
+# Desenvolvedor
+
+Para rodar usando Docker, primeiro crie uma imagem do Dockerfile:
+
+`docker build -t node-app .`
+
+Agora execute:
+
+`docker run -it node-app node /app/index.js -a "Pearl Jam" -m "Last Kiss"`
