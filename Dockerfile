@@ -1,12 +1,17 @@
 from node:argon
 
-RUN mkdir -p /app
+RUN mkdir -p /install
 
-WORKDIR /app
+WORKDIR /install
 
-COPY package.json /app/
+COPY package.json /install/
+
+ENV NODE_PATH=/install
 
 RUN npm install
 
-COPY . /app
+ENV NODE_PATH=/install/node_modules 
 
+WORKDIR /app/
+
+COPY . /app/    

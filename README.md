@@ -32,4 +32,5 @@ Para rodar usando Docker, primeiro crie uma imagem do Dockerfile:
 
 Agora execute:
 
-`docker run -it node-app node /app/index.js -a "Pearl Jam" -m "Last Kiss"`
+`docker run -it -v $(pwd):/app node-app node /app/index.js -a "Pearl Jam" -m "Last Kiss"`
+
