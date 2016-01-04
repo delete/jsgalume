@@ -11,6 +11,7 @@ program
   .option('-a, --artist', 'Add artist name')
   .option('-m, --music', 'Add music name')
   .option('-d, --discography', 'List the discography')
+  .option('-b, --album', 'Add album name')
   .parse(process.argv)
 
 
@@ -23,6 +24,10 @@ if ( program.artist && program.music ) {
 } else if ( program.artist && program.discography) {
 
   api.getDiscography(program.args[0]);
+
+} else if ( program.artist && program.album ) {
+  
+  api.getSongs(program.args[0], program.args[1]);
 
 } else {
   console.log('Something went wrong, see --help for more information.');
