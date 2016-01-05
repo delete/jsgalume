@@ -6,16 +6,16 @@ Cópia descarada e mal feita em Javascript do [Pygalume](https://github.com/inda
 
 ## Como usar?
 
-Pra instalar todas a dependências:
+Pra instalar todas as dependências:
 
 `npm install`
 
 
-Para baixar a letra da música Last Kiss do Pearl Jam:
+Para baixar a letra da música `Last Kiss` do `Pearl Jam`:
 
 `node index.js -a "Pearl Jam" -m "Last Kiss"`
 
-Para listar a discografia do Pearl Jam:
+Para listar a discografia do `Pearl Jam`:
 
 `node index.js -a "Pearl Jam" -d`
 
