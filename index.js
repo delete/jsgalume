@@ -1,33 +1,29 @@
 'use strict';
 
-const program = require('commander');
+var argv = require('yargs')
+  .usage('Usage to get lyrics: $0 -a [artist name] -m [music name]\n' +
+        'Usage to get songs list: $0 -a [artist name] -b [album name]' +
+        'Usage to get discography: $0 -a [artist name] -d')
+  .demand('a')
+  .argv;
 
 const API = require('./lib/api.js');
 
 
-program 
-  .version('0.0.1')
-  .usage('[options]')
-  .option('-a, --artist', 'Add artist name')
-  .option('-m, --music', 'Add music name')
-  .option('-d, --discography', 'List the discography')
-  .option('-b, --album', 'Add album name')
-  .parse(process.argv)
-
-
 var api = new API();
 
-if ( program.artist && program.music ) {
 
-  api.getLyrics(program.args[0], program.args[1]);
+if ( argv.a && argv.m ) {
 
-} else if ( program.artist && program.discography) {
+  api.getLyrics(argv.a, argv.m);
 
-  api.getDiscography(program.args[0]);
+} else if ( argv.a && argv.d) {
 
-} else if ( program.artist && program.album ) {
+  api.getDiscography(argv.a);
+
+} else if ( argv.a && argv.b ) {
   
-  api.getSongs(program.args[0], program.args[1]);
+  api.getSongs(argv.a, argv.b);
 
 } else {
   console.log('Something went wrong, see --help for more information.');
