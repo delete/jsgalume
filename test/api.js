@@ -3,10 +3,10 @@
 const chai = require('chai');
 const expect = chai.expect;
 const chaiAsPromised = require('chai-as-promised');
+const API = require('./../lib/api')
 
 chai.use(chaiAsPromised);
 
-const API = require('./../lib/api')
 
 describe('Test API responses', function () {
   
@@ -37,7 +37,6 @@ describe('Test API responses', function () {
 
       return expect(result).to.be.rejectedWith(expected);
     });
-
   });
 
   describe('Test getDiscography', function () {
@@ -56,7 +55,6 @@ describe('Test API responses', function () {
       var result = api.getDiscography('Pel Jam');
 
       return expect(result).to.be.rejectedWith(expected);
-
     });
   });
 
@@ -76,7 +74,6 @@ describe('Test API responses', function () {
       var result = api.getSongs('Pel Jam', 'Ten');
 
       return expect(result).to.be.rejectedWith(expected);
-
     });
 
     it('Must return a message error: Album not found!', function () {      
@@ -85,9 +82,7 @@ describe('Test API responses', function () {
       var result = api.getSongs('Pearl Jam', 'blabla');
 
       return expect(result).to.be.rejectedWith(expected);
-
     });
-
   });
 
 });
