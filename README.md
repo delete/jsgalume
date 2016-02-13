@@ -1,7 +1,8 @@
 # jsgalume
 
 
-Cópia descarada e mal feita em Javascript do [Pygalume](https://github.com/indacode/pygalume), feito só para aprendizado e diversão. :]
+Cópia descarada e mal feita em Javascript do [Pygalume](https://github.com/indacode/pygalume),
+feito só para aprendizado e diversão. :]
 
 
 ## Como usar?
@@ -32,5 +33,12 @@ Para rodar usando Docker, primeiro crie uma imagem do Dockerfile:
 
 Agora execute:
 
-`docker run -it node-app node /app/index.js -a "Pearl Jam" -m "Last Kiss"`
+`docker run -it node-app node index.js -a "Pearl Jam" -m "Last Kiss"`
+
+
+## Tests
+
+Para rodar os testes unitários:
+
+`mocha test/`
 
