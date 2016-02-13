@@ -8,5 +8,8 @@
   "dependencies": {
     "request": "latest",
     "yargs": "latest"
-  }
+  },
+  "devDependencies": {
+    "mocha": "latest"
+  }  
 }
